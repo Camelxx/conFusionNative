@@ -19,6 +19,8 @@ import { baseURL } from './shared/baseurl';
 import { PromotionService } from './services/promotion.service';
 import { LeaderService } from './services/leader.service';
 
+import { FavoriteService } from './services/favorite.service';
+
 
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
@@ -53,7 +55,8 @@ import { LeaderService } from './services/leader.service';
         DishService,
         ProcessHTTPMsgService,
         PromotionService,
-        LeaderService
+        LeaderService,
+        FavoriteService
     ],
     schemas: [
         NO_ERRORS_SCHEMA
