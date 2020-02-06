@@ -13,6 +13,7 @@ import { AboutComponent } from "~/about/about.component";
 
 import { DishService } from './services/dish.service';
 import { ProcessHTTPMsgService } from './services/process-httpmsg.service';
+import { TNSFontIconModule } from 'nativescript-ngx-fonticon';
 
 import { baseURL } from './shared/baseurl';
 import { PromotionService } from './services/promotion.service';
@@ -34,7 +35,10 @@ import { LeaderService } from './services/leader.service';
         NativeScriptModule,
         AppRoutingModule,
         HttpClientModule,
-        NativeScriptUISideDrawerModule
+        NativeScriptUISideDrawerModule,
+        TNSFontIconModule.forRoot({
+            'fa': './fonts/font-awesome.min.css'
+        })
     ],
     declarations: [
         AppComponent,
