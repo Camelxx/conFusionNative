@@ -8,6 +8,8 @@ import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angul
 import { MenuComponent } from './menu/menu.component';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
 import { HomeComponent } from './home/home.component';
+import { ContactUsComponent } from "~/contact/contact.component";
+import { AboutComponent } from "~/about/about.component";
 
 import { DishService } from './services/dish.service';
 import { ProcessHTTPMsgService } from './services/process-httpmsg.service';
@@ -38,7 +40,9 @@ import { LeaderService } from './services/leader.service';
         AppComponent,
         MenuComponent,
         DishdetailComponent,
-        HomeComponent       
+        HomeComponent,
+        ContactUsComponent,
+        AboutComponent       
     ],
     providers: [
         {provide: 'baseURL', useValue: baseURL},

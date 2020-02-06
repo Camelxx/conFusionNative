@@ -1,0 +1,13 @@
+import {Component} from "@angular/core";
+import { login, LoginResult } from "ui/dialogs";
+import { getString, setString } from "application-settings";
+
+@Component({
+    selector: 'drawer-content',
+    templateUrl: './shared/drawer/drawer.component.html',
+})
+export class DrawerComponent {
+
+    constructor() {
+    }
+}
