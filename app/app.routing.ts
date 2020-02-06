@@ -3,12 +3,16 @@ import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { Routes } from "@angular/router";
 
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
+import { HomeComponent } from './home/home.component';
+import { MenuComponent } from './menu/menu.component';
 
 
 
 const routes: Routes = [
-    { path: "", redirectTo: "/items", pathMatch: "full" },   
-    { path: 'dishdetail/:id',component: DishdetailComponent },
+    { path: "", redirectTo: "/home", pathMatch: "full" },
+    { path: "home", component: HomeComponent },
+    { path: "menu", component: MenuComponent },
+    { path: 'dishdetail/:id',     component: DishdetailComponent }
 ];
 
 @NgModule({
