@@ -2,10 +2,13 @@ import { NgModule } from "@angular/core";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { Routes } from "@angular/router";
 
+import { DishdetailComponent } from './dishdetail/dishdetail.component';
+
 
 
 const routes: Routes = [
     { path: "", redirectTo: "/items", pathMatch: "full" },   
+    { path: 'dishdetail/:id',component: DishdetailComponent },
 ];
 
 @NgModule({
