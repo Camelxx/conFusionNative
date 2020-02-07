@@ -34,6 +34,11 @@
                     <Label row="0" col="1" class="sidedrawer-list-item-text" text="Contact Us"></Label>
                 </GridLayout>
 
+                <GridLayout columns="*, auto" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/favorites')" (tap)="onNavItemTap('/favorites')">
+                    <Label col="0" [text]="'fa-heart' | fonticon" class="sidedrawer-list-item-text fa"></Label>
+                    <Label col="1" text="My Favorites" class="sidedrawer-list-item-text"></Label>
+                </GridLayout>
+
             </StackLayout>
         </ScrollView>
     </GridLayout>

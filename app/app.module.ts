@@ -4,6 +4,7 @@ import { AppRoutingModule } from "./app.routing";
 import { AppComponent } from "./app.component";
 import { HttpClientModule } from '@angular/common/http';
 import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular";
+import { NativeScriptUIListViewModule } from "nativescript-ui-listview/angular"
 
 import { MenuComponent } from './menu/menu.component';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
@@ -20,6 +21,8 @@ import { PromotionService } from './services/promotion.service';
 import { LeaderService } from './services/leader.service';
 
 import { FavoriteService } from './services/favorite.service';
+import { FavoritesComponent } from './favorites/favorites.component';
+
 
 
 
@@ -40,7 +43,8 @@ import { FavoriteService } from './services/favorite.service';
         NativeScriptUISideDrawerModule,
         TNSFontIconModule.forRoot({
             'fa': './fonts/font-awesome.min.css'
-        })
+        }),
+        NativeScriptUIListViewModule        
     ],
     declarations: [
         AppComponent,
@@ -48,7 +52,8 @@ import { FavoriteService } from './services/favorite.service';
         DishdetailComponent,
         HomeComponent,
         ContactUsComponent,
-        AboutComponent       
+        AboutComponent,
+        FavoritesComponent
     ],
     providers: [
         {provide: 'baseURL', useValue: baseURL},
