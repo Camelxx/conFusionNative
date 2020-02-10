@@ -27,6 +27,7 @@ import { FavoritesComponent } from './favorites/favorites.component';
 import { ReservationComponent } from './reservation/reservation.component';
 
 import { ReservationModalComponent } from "./reservationmodal/reservationmodal.component";
+import { CommentComponent } from "~/comment/comment.component";
 
 
 
@@ -54,7 +55,8 @@ import { ReservationModalComponent } from "./reservationmodal/reservationmodal.c
         ReactiveFormsModule
     ],
     entryComponents: [
-        ReservationModalComponent
+        ReservationModalComponent,
+        CommentComponent
     ],
     declarations: [
         AppComponent,
@@ -66,7 +68,7 @@ import { ReservationModalComponent } from "./reservationmodal/reservationmodal.c
         FavoritesComponent,
         ReservationComponent,
         ReservationModalComponent,
-        
+        CommentComponent        
     ],
     providers: [
         {provide: 'baseURL', useValue: baseURL},
