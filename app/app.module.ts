@@ -26,6 +26,8 @@ import { FavoriteService } from './services/favorite.service';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { ReservationComponent } from './reservation/reservation.component';
 
+import { ReservationModalComponent } from "./reservationmodal/reservationmodal.component";
+
 
 
 
@@ -51,6 +53,9 @@ import { ReservationComponent } from './reservation/reservation.component';
         NativeScriptFormsModule,
         ReactiveFormsModule
     ],
+    entryComponents: [
+        ReservationModalComponent
+    ],
     declarations: [
         AppComponent,
         MenuComponent,
@@ -59,7 +64,9 @@ import { ReservationComponent } from './reservation/reservation.component';
         ContactUsComponent,
         AboutComponent,
         FavoritesComponent,
-        ReservationComponent
+        ReservationComponent,
+        ReservationModalComponent,
+        
     ],
     providers: [
         {provide: 'baseURL', useValue: baseURL},
