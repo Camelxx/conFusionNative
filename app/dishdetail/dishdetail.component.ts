@@ -8,6 +8,7 @@ import { switchMap } from 'rxjs/operators';
 
 import { FavoriteService } from '../services/favorite.service';
 import { TNSFontIconService } from 'nativescript-ngx-fonticon';
+import { Toasty } from 'nativescript-toasty';
 
 @Component({
   selector: 'app-dishdetail',
