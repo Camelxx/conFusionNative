@@ -11,6 +11,8 @@ import { DishdetailComponent } from './dishdetail/dishdetail.component';
 import { HomeComponent } from './home/home.component';
 import { ContactUsComponent } from "~/contact/contact.component";
 import { AboutComponent } from "~/about/about.component";
+import { NativeScriptFormsModule } from "nativescript-angular/forms";
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { DishService } from './services/dish.service';
 import { ProcessHTTPMsgService } from './services/process-httpmsg.service';
@@ -22,6 +24,7 @@ import { LeaderService } from './services/leader.service';
 
 import { FavoriteService } from './services/favorite.service';
 import { FavoritesComponent } from './favorites/favorites.component';
+import { ReservationComponent } from './reservation/reservation.component';
 
 
 
@@ -44,7 +47,9 @@ import { FavoritesComponent } from './favorites/favorites.component';
         TNSFontIconModule.forRoot({
             'fa': './fonts/font-awesome.min.css'
         }),
-        NativeScriptUIListViewModule        
+        NativeScriptUIListViewModule,
+        NativeScriptFormsModule,
+        ReactiveFormsModule
     ],
     declarations: [
         AppComponent,
@@ -53,7 +58,8 @@ import { FavoritesComponent } from './favorites/favorites.component';
         HomeComponent,
         ContactUsComponent,
         AboutComponent,
-        FavoritesComponent
+        FavoritesComponent,
+        ReservationComponent
     ],
     providers: [
         {provide: 'baseURL', useValue: baseURL},
