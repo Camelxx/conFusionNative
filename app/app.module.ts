@@ -30,6 +30,7 @@ import { ReservationModalComponent } from "./reservationmodal/reservationmodal.c
 import { CommentComponent } from "~/comment/comment.component";
 
 import { CouchbaseService } from './services/couchbase.service';
+import { ReservationService } from "~/services/reservation.service";
 
 
 
@@ -79,7 +80,8 @@ import { CouchbaseService } from './services/couchbase.service';
         PromotionService,
         LeaderService,
         FavoriteService,
-        CouchbaseService
+        CouchbaseService,
+        ReservationService
     ],
     schemas: [
         NO_ERRORS_SCHEMA
