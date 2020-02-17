@@ -33,6 +33,8 @@ import { CouchbaseService } from './services/couchbase.service';
 import { ReservationService } from "~/services/reservation.service";
 import { UserAuthComponent } from "./userauth/userauth.component";
 
+import { PlatformService } from './services/platform.service';
+
 
 
 
@@ -83,7 +85,8 @@ import { UserAuthComponent } from "./userauth/userauth.component";
         LeaderService,
         FavoriteService,
         CouchbaseService,
-        ReservationService
+        ReservationService,
+        PlatformService
     ],
     schemas: [
         NO_ERRORS_SCHEMA
