@@ -6,6 +6,8 @@ import { DrawerPage } from '~/shared/drawer/drawer.page';
 
 import { TNSFontIconService } from 'nativescript-ngx-fonticon';
 import * as Email from 'nativescript-email';
+import * as TypePhone from 'nativescript-phone';
+
 
 @Component({
   selector: 'app-contactus',
@@ -25,7 +27,6 @@ export class ContactUsComponent extends DrawerPage {
 
 
   sendEmail() {
-
     Email.available()
       .then((avail: boolean) => {
         if (avail) {
@@ -37,9 +38,19 @@ export class ContactUsComponent extends DrawerPage {
         }
         else
           console.log('No Email Configured');
-      })
-
+      });
   }
+
+  callRestaurant() {
+    const phoneNumber = '+852 1234 5678';
+    TypePhone.requestCallPermission('You should accept the permission to be able to make a direct phone call.')
+          .then(() => TypePhone.dial(phoneNumber, false))
+          .catch(() => TypePhone.dial(phoneNumber, true));
+  }
+
+
+
+
 
 
 } 
