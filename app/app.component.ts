@@ -7,7 +7,7 @@ import { PlatformService } from './services/platform.service';
 })
 
 export class AppComponent implements OnInit, OnDestroy { 
-
+    
     constructor(private platformService: PlatformService) { } 
     
     ngOnInit() { 
@@ -20,6 +20,5 @@ export class AppComponent implements OnInit, OnDestroy {
     
     ngOnDestroy() {       
       this.platformService.stopMonitoringNetwork();       
-    } 
-    
+    }     
   }
