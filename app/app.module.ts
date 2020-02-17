@@ -31,6 +31,7 @@ import { CommentComponent } from "~/comment/comment.component";
 
 import { CouchbaseService } from './services/couchbase.service';
 import { ReservationService } from "~/services/reservation.service";
+import { UserAuthComponent } from "./userauth/userauth.component";
 
 
 
@@ -71,7 +72,8 @@ import { ReservationService } from "~/services/reservation.service";
         FavoritesComponent,
         ReservationComponent,
         ReservationModalComponent,
-        CommentComponent        
+        CommentComponent,
+        UserAuthComponent
     ],
     providers: [
         {provide: 'baseURL', useValue: baseURL},

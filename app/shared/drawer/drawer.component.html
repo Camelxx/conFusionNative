@@ -9,6 +9,13 @@
             <StackLayout class="sidedrawer-content">
 
                 <GridLayout class="sidedrawer-list-item" rows="*" columns="50, *" orientation="horizontal"
+                    [nsRouterLink]="['/auth']" clearHistory="true">
+                    <Label row="0" col="0" class="sidedrawer-list-item-text fa"
+                        [text]="'fa-sign-in' | fonticon"></Label>
+                    <Label row="0" col="1" class="sidedrawer-list-item-text" text="Login"></Label>
+                </GridLayout>
+
+                <GridLayout class="sidedrawer-list-item" rows="*" columns="50, *" orientation="horizontal"
                     [nsRouterLink]="['/home']" clearHistory="true">
                     <Label row="0" col="0" class="sidedrawer-list-item-text fa" [text]="'fa-home' | fonticon"></Label>
                     <Label row="0" col="1" class="sidedrawer-list-item-text" text="Home"></Label>
@@ -35,21 +42,17 @@
                     <Label row="0" col="1" class="sidedrawer-list-item-text" text="Contact Us"></Label>
                 </GridLayout>
 
-                <GridLayout columns="*, auto" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/favorites')" (tap)="onNavItemTap('/favorites')">
+                <GridLayout columns="*, auto" class="sidedrawer-list-item"
+                    [class.selected]="isComponentSelected('/favorites')" (tap)="onNavItemTap('/favorites')">
                     <Label col="0" [text]="'fa-heart' | fonticon" class="sidedrawer-list-item-text fa"></Label>
                     <Label col="1" text="My Favorites" class="sidedrawer-list-item-text"></Label>
                 </GridLayout>
 
-                <GridLayout columns="*, auto" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/reservation')" (tap)="onNavItemTap('/reservation')">
+                <GridLayout columns="*, auto" class="sidedrawer-list-item"
+                    [class.selected]="isComponentSelected('/reservation')" (tap)="onNavItemTap('/reservation')">
                     <Label col="0" [text]="'fa-cutlery' | fonticon" class="sidedrawer-list-item-text fa"></Label>
                     <Label col="1" text="Reserve Table" class="sidedrawer-list-item-text"></Label>
-                </GridLayout>
-
-                <GridLayout columns="*, auto" class="sidedrawer-list-item" (tap)="displayLoginDialog()">
-                    <Label col="0" [text]="'fa-sign-in' | fonticon" class="sidedrawer-list-item-text fa"></Label>
-                    <Label col="1" text="Login" class="sidedrawer-list-item-text"></Label>
-                </GridLayout>
-
+                </GridLayout>             
             </StackLayout>
         </ScrollView>
     </GridLayout>
